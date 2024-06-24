@@ -1,0 +1,160 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../img/logo.png'
+---
+
+<nav>
+    <div class="container nav-container">
+      <a href="/" class="logo-link" aria-label="go to homepage">
+      <Image class='navLogo' src={logo} alt="logo klubu"/>
+    </a>
+  <div class="nav-wrapper">
+    <button class="btn btn--menu" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Open mobile nav">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" stroke-width="3" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+  
+  </button>
+<ul role="menubar" class="nav-links" id="menu">
+  <li role="none">
+    <a role="menuitem" href="/" class="nav-link btn">Aktualności</a>
+  </li>
+<li role="none">
+  <a role="menuitem" href="/karate/" class="nav-link btn">Karate</a>
+</li>
+<li role="none">
+  <a role="menuitem" href="/klub/" class="nav-link btn">Klub</a>
+</li>
+<li role="none">
+  <a role="menuitem" href="/kontakt/" class="nav-link btn">Kontakt</a>
+</li>
+</ul> 
+</div>
+
+
+</div>
+</nav>
+
+<style>
+     nav{
+    position: fixed; 
+    z-index: 10;
+    width: 100%;
+    padding-block: 1.2rem ;
+    background-color:rgba(0, 0, 0, 0.7) ;
+    
+    transition: background-color 800ms cubic-bezier(0.64,0.04,0.26,0.87);
+    }
+    nav.active {
+      background-color: #fff;
+    }
+    .container {
+  margin-inline: max((100% - 90rem) / 2, 1rem);
+}
+    .nav-container{
+      display: flex;
+      max-width: 1200px;
+      justify-content: space-between;
+      align-items: center;
+      }
+        .navLogo{
+          margin-inline:0.5rem;
+          width: 5rem;
+          height: 5rem;
+        }
+        .nav-links {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 1.5em;
+          transform: translate3d(0,-200%,0);
+          position: absolute;
+          z-index: -1;
+          top: 6.6rem;
+          left: 0;
+          right: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+          padding: 1.5rem;
+          border-bottom: 4px solid black;
+          text-align: center;
+        }
+        .nav-links.activated{
+          transition: transform 0.4s cubic-bezier(0.64,0.04,0.26,0.87);
+        }
+
+        .btn{
+          color: white;
+          text-decoration: none;
+          padding: 0.3rem 1.5rem;
+          cursor: pointer;
+          border-radius: 0.5rem;
+          transition: color  0.5s;
+        }
+        .btn:hover{
+          color: rgb(84, 158, 255)
+        }
+
+        .btn--menu{
+          color: white;
+          background-color: transparent;
+          border: none;
+          display: grid;
+          place-items: center;
+          padding-inline: 2rem;
+          transition: transform 0.3s cubic-bezier(0.64,0.04,0.26,0.87);
+        }
+        
+
+        li[role='none'], .navlink{
+          width: 100%;
+          display: block;
+          font-size: 1.1rem;
+          text-transform: uppercase;
+        }
+        
+
+        .btn--menu[aria-expanded='true']{
+          transform: rotate(180deg);
+        }
+        .btn--menu[aria-expanded='true'] + .nav-links{
+          transform: translate3d(0,0,0);
+        }
+        
+        @media(min-width: 768px){
+          .btn--menu{
+            display: none;
+          }
+          .nav-links{
+            position: static;
+            transform: translate3d(0,0,0);
+            flex-direction: row;
+            border: 0;
+            z-index: 0;
+            padding: 0;
+            inset: 0;
+         
+            background-color: transparent;
+          }
+          li[role='none'], .nav-link {
+            width: initial;
+          }
+        }
+</style>
+
+<script>
+    const navBtn = document.querySelector('#menu-btn')
+    const nav = document.querySelector('nav')
+    const navLinks = document.querySelector('.nav-links')
+
+    
+    navBtn.addEventListener('click', () => {
+      const isExpanded = JSON.parse(navBtn.getAttribute('aria-expanded'))
+      navBtn.setAttribute('aria-expanded', !isExpanded)
+      // !isExpanded && nav.classList.add('active')  ==== 25 MINUTA FILMIKU PRZY ZJEZDZIE W DÓŁ TŁO SIE PRZYCIEMNIA
+    
+    })
+    
+    window.addEventListener('DOMContentLoaded',() =>{
+      navLinks.classList.add('activated')
+      } )
+</script>

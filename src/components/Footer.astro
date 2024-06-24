@@ -1,0 +1,189 @@
+---
+import { Image } from "astro:assets";
+import logo from '../img/logo.png'
+import logoPfk from '../img/Loga/pfks.png' 
+import logoWko from '../img/Loga/wko.png'
+import logoEko from '../img/Loga/eko.png'
+import logoShinKanku from '../img/Loga/shinkanku.png'
+---
+
+<footer>
+
+    
+        <div class="logo-box">
+            <a href=""><Image  src={logo} alt="Logo Ełcki klub karate"></a>
+            <a href="https://shinkyokushin.org.pl/"><Image src={logoPfk}
+                    alt="Logo Polskiej federacji karate"></a>
+            <a href="https://www.european-kyokushin.org"> <Image
+              src={logoEko}
+                    alt="Logo Europejskiej federacji karate"></a>
+            <a href="https://www.wko.or.jp/"> <Image
+              src={logoWko}
+                    alt="Logo światowej organizacji karate"></a>
+
+        </div>
+
+        <div class="footer-menu">
+
+            <div class="footer-contact">
+                <h4>Kontakt</h4>
+                <div class="footer-contact-info"><i class="fa-solid fa-location-dot"></i>
+                    <p>19-300 Ełk ul. Bora Komorowskiego 1</p>
+                </div>
+                <div class="footer-contact-info"><i class="fa-solid fa-phone"></i>
+                    <p>503 011 707 </p>
+                </div>
+                <div class="footer-contact-info"><i class="fa-solid fa-envelope"></i>
+                    <p>biuro@karate.elk.pl </p>
+                </div>
+                <div class="footer-contact-info"><a href="https://www.facebook.com/karate.elk"><i class="fa-brands fa-facebook"></i>
+                    <p>Ełcki Klub Karate Kyokushin</p></a>
+                </div>
+            </div>
+
+
+            <div class="footer-link-box">
+                <h4>Linki</h4>
+                <a href="./index.html#aktualnosci">Aktualności</a>
+                <!-- <a href="#">O Nas</a> -->
+                <a href="./karate.html">Karate</a>
+                <a href="./klub.html">Klub</a>
+                <a href="./kontakt.html">Kontakt</a>
+            </div>
+            
+
+
+
+            <div class="footer-img">
+                <Image src={logoShinKanku} alt="Logo shinkyokushin">
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p>Ełcki Klub Karate Shinkyokushin</p>
+            <p>1978 - 2023</p>
+        </div>
+
+</footer>
+
+<script>
+
+</script>
+
+<style>
+
+  .logo-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  background-color: #d4d4d4;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.5rem 0 ;
+  
+}
+
+.logo-box img{
+  width: 9rem;
+  height: 8rem;
+  object-fit: contain;
+  }
+.footer-menu {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 100%;
+  height: 100%;
+  
+}
+.footer-menu .footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  order: 2;
+  /* width: 60%; */
+  width: 100%;
+  height: 100%;
+  /* height: 180px; */
+}
+
+.footer-menu .footer-contact h4 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.footer-menu .footer-contact-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+.footer-menu .footer-contact-info i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+.footer-menu .footer-contact-info p {
+  font-size: 1rem;
+}
+.footer-menu .footer-contact-info a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  transition: color 0.5s;
+}
+
+
+.footer-menu .footer-link-box {
+  order: 3;
+  width: 30%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.footer-menu .footer-link-box h4 {
+  margin-top: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.footer-menu .footer-link-box a {
+  padding: 0 15px;
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  transition: color 0.5s;
+}
+.footer-menu .footer-link-box a:hover {
+  color: #3166ff;
+}
+
+.footer-img {
+  display: flex;
+  width: 60%;
+  height: 100%;
+}
+.footer-img img {
+  width: 90%;
+  height: 100%;
+  padding: 20px;
+
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 40px;
+  background-color: #ebeaea;
+  font-size: 1.2rem;
+}
+
+@media(min-width: 768px){
+
+}
+</style>
