@@ -1,20 +1,471 @@
 ---
-
+import '../styles/global.css';
+  import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Section from '../layouts/Section.astro';
+import { Image } from 'astro:assets';
+import klubOne from '../img/klub1.jpg'
+import klubTwo from '../img/klub2.jpg'
+import silkaOne from '../img/silka1.jpg'
+import silkaTwo from '../img/silka2.jpg'
+import salaOne from '../img/sala1.jpg'
+import salaTwo from '../img/sala2.jpg'
+import parkOne from '../img/park1.jpg'
+import parkTwo from '../img/park2.jpg'
+import sala from '../img/sala.jpg'
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width" />
+    <script src="https://kit.fontawesome.com/c6f29183f5.js" crossorigin="anonymous"></script>
     <title>Klub</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    
+  
+    <Navigation/>
 
-    <h1>KLUB</h1>
-    <p>AAAAA</p>
+    <Section sectionTitle="Nasz klub">
+
+      <div class="gallery-container">
+        <Image src={klubOne} alt="Ełcki Klub Karate"/>
+        <Image src={klubTwo} alt="Ełcki Klub Karate"/>
+        <Image src={parkOne} alt="Park Ełckiego Klubu Karate"/>
+        <Image src={parkTwo} alt="Park Ełckiego Klubu Karate"/>
+        <Image src={salaOne} alt="Sala Ełckiego Klubu Karate"/>
+        <Image src={sala} alt="Sala Ełckiego Klubu Karate"/>
+        <Image src={salaTwo} alt="Sala Ełckiego Klubu Karate"/>
+        <Image src={silkaOne} alt="Siłownia Ełckiego Klubu Karate"/>
+        <Image src={silkaTwo} alt="Siłownia Ełckiego Klubu Karate"/>
+    </div>
+
+    </Section>
+
+
+
+
+    <Section sectionTitle="Grupy treningowe">
+
+      <div class="group-boxes">
+
+        <div class="group-box">
+            <div class="img-group">
+                <div class="shadow-group"></div>
+                <img src="./img/dzieci 5 pocz.jpg" alt="Grupa dzieci 5 lat">
+            </div>
+            <div class="title-group">
+                <h3>Dzieci 5  - 6 lat początkująca</h3>
+            </div>
+        </div>
+
+        <div class="group-box">
+            <div class="img-group">
+                <div class="shadow-group"></div>
+                <img src="./img/gupa dzieci 5-6 zaaw.jpg" alt="Grupa dzieci 6 lat"">
+            </div>
+            <div class="title-group">
+                <h3>Dzieci 6 - 7 lat zaawansowana</h3>
+            </div>
+        </div>
+        <div class="group-box">
+            <div class="img-group">
+                <div class="shadow-group"></div>
+                <img src="./img/pocz 7-9.jpg" alt="Grupa dzieci 7 lat"">
+            </div>
+            <div class="title-group">
+                <h3>Dzieci 7 - 9 lat początkująca</h3>
+            </div>
+        </div>
+        <div class="group-box">
+            <div class="img-group">
+                <div class="shadow-group"></div>
+                <img src="./img/dzieci zaaw.jpg" alt="Grupa dzieci 10 lat"">
+            </div>
+            <div class="title-group">
+                <h3>Dzieci 8 - 12 lat zaawansowana</h3>
+            </div>
+        </div>
+        <div class="group-box">
+            <div class="img-group">
+                <div class="shadow-group"></div>
+                <img src="./img/gupa dzieci 5-6 zaaw.jpg" alt="">
+            </div>
+            <div class="title-group">
+                <h3>Młodzież 10 - 14 lat początkująca</h3>
+            </div>
+        </div>
+        <div class="group-box">
+            <div class="img-group">
+                <div class="shadow-group"></div>
+                <img src="./img/grupa zawodnicza.jpg" alt="Grupa zawodnicza">
+            </div>
+            <div class="title-group">
+                <h3> 10 - 16 lat zaawansowana</h3>
+            </div>
+        </div>
+        <div class="group-box">
+            <div class="img-group">
+                <div class="shadow-group"></div>
+                <img src="./img/kobiety.jpg" alt="Grupa Kobiet">
+            </div>
+            <div class="title-group">
+                <h3>Kobiety Zaawansowana</h3>
+            </div>
+        </div>
+        <div class="group-box">
+            <div class="img-group">
+                <div class="shadow-group"></div>
+                <img src="./img/dorosli pocz.jpg" alt="Grupa dorosłych początkujących">
+            </div>
+            <div class="title-group">
+                <h3>Dorośli Początkująca</h3>
+            </div>
+        </div>
+        <div class="group-box">
+            <div class="img-group">
+                <div class="shadow-group"></div>
+                <img src="./img/dorosli.jpg" alt="Grupa dorosłych zaawansowanych">
+            </div>
+            <div class="title-group">
+                <h3>Dorośli Zaawansowana</h3>
+            </div>
+        </div>
+
+    </div>
+
+    </Section>
+
+
+
+
+
+    <Section sectionTitle="instruktorzy">
+
+      <div class="intructor-cards">
+
+        <div class="card patryk">
+            <button><i class="far fa-question-circle"></i></button>
+            <div class="instructor-text">
+                <h3>Patryk Karpiński</h3>
+                <h4>2 DAN</h4>
+                <p>Karate trenuje od 8go roku życia. Od tego czasu prowadzi aktywny tryb życia, spełnia się nie
+                    tylko jako instruktor karate ale również trener personalny oraz instruktor samoobrony.
+                    Uczestnik mistrzow Polski oraz Europy. Na codzień Ratownik Medyczny.</p>
+            </div>
+        </div>
+
+        <div class="card krzysiek">
+            <button><i class="far fa-question-circle"></i></button>
+            <div class="instructor-text">
+                <h3>Krzysztof Mieczławski</h3>
+                <h4>3 DAN</h4>
+                <p>Swoją przygodę z karate zaczął w 1982r. Już od ponad 23 lat realizuje się jako instruktor
+                    prowadząc treningi dla dzieci oraz młodzieży. Na codzień starszy inspektor Straży Miejskiej
+                </p>
+            </div>
+        </div>
+
+        <!-- Karate trenuje od 8 roku życia. Na codzień jestem ratownikiem medycznym oraz trenerem personalnym. Karate jest dla mnie czymś więcej niż tylko sportem i staram się przekazywać to moim podopiecznym. Każdego dnia stawiam sobie nowe cele oraz wyzwania -->
+        <div class="card iga">
+            <button><i class="far fa-question-circle"></i></button>
+            <div class="instructor-text">
+                <h3>Iga Wałejko</h3>
+                <h4>1 DAN</h4>
+                <p>Swoją przygodę z karate rozpoczęła jako 9 letnia dziewczynka. Uczestniczka Mistrzostw Polski
+                    oraz Europy. Stale rozwija swoje umiejętności biorąc udział w obozach, seminariach oraz
+                    kursach. Od 5 lat spełnia się w roli instruktora prowadząc treningi najmłodszym członkom
+                    klubu. Zawodowo realizuje się pracując jako fizjoterapeuta.</p>
+            </div>
+        </div>
+
+        <div class="card magda">
+            <button><i class="far fa-question-circle"></i></button>
+            <div class="instructor-text">
+                <h3>Magdalena Malinowska</h3>
+                <h4>2 DAN</h4>
+                <p>Karate trenuje od ponad 20 lat, uczestniczka mistrzostw Polski oraz Europy, instruktor grup
+                    dzieci oraz dorosłych a także sędzia krajowy. Na codzień realizuje się jako pracownik
+                    samorządowy. </p>
+            </div>
+        </div>
+
+        <div class="card remigiusz">
+            <button><i class="far fa-question-circle"></i></button>
+            <div class="instructor-text">
+                <h3>Remigiusz Karpiński</h3>
+                <h4>6 DAN</h4>
+                <p>Prezes EKKK, Prezes Polskiej Federacji Karate Shinkyokushin oraz wiceprezydent Światowej Organizacji Karate Shinkyokushin. Karate trenuje od ponad 40 lat. Wieloletni trener, który wychował kilka pokoleń karateków.   </p>
+            </div>
+        </div>
+
+        <div class="card marcin">
+            <button><i class="far fa-question-circle"></i></button>
+            <div class="instructor-text">
+                <h3>Marcin Stemborowski</h3>
+                <h4>2 DAN</h4>
+                <p>Karate trenuje od 18 lat. Doświadczony instruktor stale rozwijający swoje umiejętności.
+                    Uczestniczył w mistrzostwach Polski oraz Europy. Preferuje aktywny styl życia również poza
+                    dojo.
+                    Oprócz karate wielką pasją jest motoryzacja, w której sie realizuje pracując jako mechanik
+                    samochodowy.
+                </p>
+                <!-- (od 2005r) -->
+            </div>
+        </div>
+
+
+    </div>
+
+    </Section>
+
+
+
+
+    <Section sectionTitle="Regulamin i opłaty">
+
+      <div class="rules">
+        <h3>REGULAMIN OPŁAT SKŁADEK CZŁONKOWSKICH</h3>
+
+        <ul class="nonDotted">
+            <li>1. Składki wnosi się do 10 dnia każdego miesiąca przelewem na konto klubu: <br>
+                Bank PARIBAS nr rachunku: 83 2030 0045 1110 0000 0074 3280
+            </li>
+            <li>2. Zapisując się do klubu należy: wypełnić deklarację członkowską, zadeklarować odpowiednią
+                grupę i uiścić jednorazowe wpisowe w wysokości 60 zł.</li>
+            <li>3. Składki członkowskie wnosi się do 10-go dnia każdego miesiąca, po tym terminie składka
+                wzrasta o 5 zł.</li>
+            <li>4. Jednorazowe wejście na trening wynosi 20 złotych.</li>
+            <li>6. W przypadku uczestnictwa w zajęciach mniej niż 5 osób Klub ma prawo zawiesić takie zajęcia,
+                lub połączyć taką grupę z inną grupą.</li>
+            <li>7. Wszystkie osoby uczestniczące w zajęciach prowadzonych przez Klub mają obowiązek informowania
+                instruktora o wszelkich dolegliwościach zdrowotnych przed zajęciami</li>
+            <li>8. Klub stwarza możliwość uczestniczenia w pierwszych zajęciach nieodpłatnie osobom, które nie
+                są pewne czy podołają w zajęciach. </li>
+            <li>9. W przypadku wpłaty na konto dowód wpłaty należy okazać w recepcji lub instruktorowi
+                prowadzącemu zajęcia.</li>
+            <li>Wszelkie odstępstwa od powyższych zasad podlegają osobnym uzgodnieniom. </li>
+            <li>11. Niniejszy regulamin obowiązuje od dnia 1 września 2023 roku.</li>
+        </ul>
+
+        <h3>Składki członkowskie</h3>
+        <ul class="dotted">
+            <li>180 zł, miesięczna składka członkowska </li>
+            <li>160 zł, miesięczna składka członkowska dla kolejnej osoby z rodziny</li>
+            <li>100 zł, składka członkowska dla nowych osób wstępujących do klubu po 15 dniu miesiąca,</li>
+            <li>80 zł, miesięczna składka członkowska dla osób nie uczestniczących w zajęciach
+                w okresie dwóch miesięcy letniej przerwy wakacyjnej (lipiec - sierpień)
+            </li>
+            <li>60 zł, składka członkowska za siłownię 2 razy w tygodniu</li>
+            <li>80 zł, składka członkowska za siłownię 3 razy w tygodniu</li>
+            <li>100 zł składka członkowska za siłownię 4 razy w tygodniu</li>
+            <br>
+            <p>Wstępując do Klubu, członkiem Klubu jest się okrągły rok, w związku z tym nieobecność na
+                zajęciach czy okres wakacji nie zwalnia członka klubu z obowiązku opłat składki członkowskiej.
+            </p>
+        </ul>
+        </li>
+
+        <div class="links">
+            <h3>Pliki do pobrania</h3>
+            <a href="./download/Deklaracja - Klub.doc" download> <i
+                    class="fa-regular fa-file"></i>Deklaracja</a>
+            <a href="./download/Zgody dorosłych.docx" download> <i class="fa-regular fa-file"></i>Zgody
+                dorosłych</a>
+            <a href="./download/Zgody opiekunów dzieci.docx" download> <i class="fa-regular fa-file"></i>Zgody
+                dzieci</a>
+        </div>
+
+    </div>
+
+    </Section>
+<Footer />
    
   </body>
 </html>
+
+<style>
+  .rules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 25px;
+  font-size: 1.5rem;
+}
+.rules h3 {
+  font-size: 1.8rem;
+  margin: 40px 0;
+}
+.rules .nonDotted {
+  list-style: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+}
+.links a {
+  font-size: 20px;
+  margin: 10px;
+  padding: 3px;
+  text-decoration: none;
+  color: #3166ff;
+  transition: color 0.3s;
+}
+.links a:hover {
+  color: #0d2670;
+}
+.links i {
+  margin-right: 5px;
+}
+
+
+
+.gallery-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery-container img {
+  width: 12rem;
+  height: 10rem;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+
+
+.group-boxes {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+}
+
+.shadow-group {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.group-box {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  border: 1px solid black;
+}
+.group-box img {
+  padding-bottom: 2px;
+  width: 100%;
+  height: 210px;
+  background-position: center;
+  background-size: cover;
+}
+.group-box .title-group {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+.group-box .title-group h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+
+
+
+
+.intructor-cards {
+  display: flex;
+  flex-direction: column;
+}
+.intructor-cards .patryk {
+  background-image: url("../img/Patryk.jpg");
+}
+.intructor-cards .iga {
+  background-image: url("../img/iga.jpg");
+}
+.intructor-cards .magda {
+  background-image: url("../img/magda.jpg");
+}
+.intructor-cards .remigiusz {
+  background-image: url("../img/remigiusz.jpg");
+}
+.intructor-cards .krzysiek {
+  background-image: url("../img/krzysiek.jpg");
+}
+.intructor-cards .marcin {
+  background-image: url("../img/Marcin.jpg");
+}
+.intructor-cards .card {
+  position: relative;
+  margin: 10px;
+  height: 500px;
+  width: 90%;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+.intructor-cards .card button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  cursor: crosshair;
+  z-index: 4;
+}
+.intructor-cards .card .instructor-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  -webkit-clip-path: circle(0% at 50% 90%);
+          clip-path: circle(0% at 50% 90%);
+  transition: -webkit-clip-path 0.8s;
+  transition: clip-path 0.8s;
+  transition: clip-path 0.8s, -webkit-clip-path 0.8s;
+}
+.intructor-cards .card h3 {
+  margin-bottom: 5px;
+  color: rgb(182, 179, 97);
+  font-size: 3rem;
+}
+.intructor-cards .card h4 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: rgb(141, 138, 138);
+}
+.intructor-cards .card p {
+  font-size: 1.7rem;
+}
+.intructor-cards .card button:hover ~ .instructor-text {
+  -webkit-clip-path: circle(120% at 50% 90%);
+          clip-path: circle(120% at 50% 90%);
+}
+
+</style>

@@ -1,4 +1,18 @@
 ---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+    import Footer from '../components/Footer.astro';
+    import Section from '../layouts/Section.astro';
+
+import bodhidarma from '../img/Bodhidharma.jpg'
+import funakoshi from '../img/Funakoshi.jpg'
+import oyama from '../img/oyama.jpg'
+import kyokushin from '../img/kyokushin.png'
+import KankuKyokushin from '../img/KankuKyokushin.jpg'
+import shinkyokushin from '../img/Shinkyokushin.png'
+import shinkyokushinKanku from '../img/ShinkyokushinKanku.png'
+import { Image } from 'astro:assets';
+
 ---
 <html lang="en">
   <head>
@@ -7,12 +21,292 @@
     <title>Karate</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    
+    <Navigation/>
 
-    <h1>KARATE</h1>
-    <p>This is where I will post about my journey learning Astro.</p>
-   
+        <Section sectionTitle="historia karate">
+
+          <div class="history-text-container">
+
+            <p>Funkcjonuje obecnie przekonanie, iż karate jest czysto japońską sztuką walki, podobnie jak sumo
+                czy kendo. Tymczasem źródła historyczne wykazują, iż pierwszy zapis o sztuce walki pochodzi z
+                roku 2500 p.n.e. a za kolebkę wszystkich dalekowschodnich systemów walki uważa się starożytne
+                Chiny, a jeszcze wcześniej Indie. Droga jaką przebyło karate, nim trafiło do Japonii jest długa
+                i liczy wiele wieków.
+
+            </p>
+            <div class="bodhidarma">
+                <div class="bodhidarma-text">
+                    <p>W 520r. n.e. Hinduski mnich Bodhidarma przybył pieszo z Indii do Chin, by nauczać tam
+                        Buddyzmu. Studiował techniki ataku zwierząt i owadów oraz siły natury.
+                        Łączył je ze
+                        specialnymi technikami oddychania i tworzył podstawy legendarnego systemu walki bez
+                        użycia
+                        broni opartego na Księdze Wróżb i Przemian. Będąc w Chinach, wybudował światynię
+                        Shaolin w prowincji Honan, gdzie udzielał mnichom swych nauk. Pomostem, którym karate
+                        przedostało się z Chin do Japonii jest Okinawa, jedna Z wysp archipelagu Ryukyu, bẹdqca
+                        W
+                        tamtym czasie ważnym ośrodkiem pośrednictwa handlowego pomiędzy Chinami i Japonią.
+                    </p>
+                </div>
+                <div class="bodhidarma-img">
+                    <Image src={bodhidarma} alt="Bodhidharma">
+                </div>
+            </div>
+
+
+            <p>W 1609 roku japoński ród Satsuma po porażce z rodem
+                Tokugawa kieruje się w stronę archipelagu
+                Ryukyu, wyprawiając militarną ekspedycję na Okinawę.
+                Okupacja wyspy trwała ponad 250 lat. Zakaz
+                posiadania wszelakiej broni zmusza tubylców do nauki
+                walki wręcz. W zupełnej tajemnicy, najczęściej nocą,
+                mieszkańcy Ryukyu korzystając z doświadczeń chińskich
+                ćwiczyli metodę walki powstałą z połączenia różnych
+                styli.
+            </p>
+
+            <div class="funakoshi">
+                <div class="funakoshi-text">
+                    <p> <span>CHUAN - FAI TODE</span> <br>
+                        Jednym z mistrzów okinawskich byt Gichin Funakoshi
+                        (1868 - 1957), zwany ojcem karate. Wywarł on ogromny
+                        wpływ na japońskie Budo. Wprowadził ostatecznie do
+                        użycia termin "karate", sama zaś sztuka, weszła obok
+                        judo, kendo i aikido w skład japońskiego systemu sztuki
+                        walki - Budo. Główną częścią nauk Funakoshiego były kata, W połączeniu z podstawowymi
+                        ćwiczeniami i etykietą. Z
+                        czasem jego styl walki przyjął nazwę Shotokan. </p>
+                </div>
+                <div class="funakoshi-img">
+                    <Image src={funakoshi} alt="Gichin-Funakoshi">
+                </div>
+
+            </div>
+
+
+            <p><span>Sosai Masutatsu Oyama</span> <br> Ostatni samurai, twórca potęgi Kyokushin,
+                które obecnie uprawia na całym świecie kilkadziesiąt milionów ludzi.</p>
+
+            <p>Masutatsu Oyama urodził się 27 lipca 1923 roku w
+                wiosce niedaleko Gunsan w południowej Korei. Dwa
+                lata później rodzice wysyłają go do siostry w Mandżurii.
+                Jako uczeń szkoły podstawowej w Korei zaczyna studia
+                chińskiego kempo, kilka lat później zdobywa swój
+                pierwszy czarny pas. Następnie rozpoczyna naukę w
+                Szkole Lotniczej w Tokio i wstępuje do szkoły karate gdzie
+                ćwiczy pod okiem Gichina Funakoshiego. Jako 17-letni
+                student zdobywa 2 dan w karate, jednocześnie uprawia
+                judo i boks. W czasie wojny jak każdy młody
+                japończyk gotów był oddać życie za cesarza i swój kraj.
+                Młody Oyama wstępuje do oddziałów samobójczych -
+                kamikadze. Od śmierci uchroniło go wtedy zakończenie
+                działań wojennych. Po wojnie rozpoczyna studia na
+                uniwersytecie Waseda. W 1947 roku wygrywa w Kioto I
+                Otwarte Mistrzostwa Japonii w karate. W 1948 roku
+                udaje się na górę Kiyosumi w prowincji Chiba, aby
+                doprowadzić swą technikę do perfekcji i określić swoją
+                drogę karate. Za jedyne wsparcie duchowe posiada
+                pamiętniki wielkiego mistrza miecza Miyamoto Musashi,
+                które pozwalają mu przetrwać w górach przez 18
+                miesięcy. Po powrocie z gór Oyama jako jedyny w historii
+                karateka decyduje się walkę z bykiem w Chiba, szukając
+                w niej granic możliwości człowieka, zwierzę zostaje pokonane.
+            </p>
+
+            <p>KYOKUSHIN (ekstremum prawdy) tak nazwie karate
+                kilka lat później. Lecz zanim to nastąpi wyjeżdża w 1952
+                roku do USA, gdzie przez 11 miesięcy popularyzuje
+                karate poprzez pokazy i konfrontacje z przedstawicielami
+                innych systemów walki, ponownie też stawia czoło bykom.
+                Staje się sławny przez cios "Shuto", którym
+                potrafi ściąć rogi byka. "The New York Times" pisze o nim
+       
+
+
+                <p>W 1954 roku zostaje otwarte pierwsze dojo Oyamy w
+                    Japonii. Sam mistrz podróżuje przez płd.-wsch. Azję
+                    studiuąc wiele różnorodnych stylów walki. W 1957 roku
+                    w czasie jednej z pokazowych walk z bykiem w Meksyku
+                    zostaje ciężko ranny i 6 miesięcy przebywa w szpitalu. W
+                    1958 roku wydaje książkę "What is karate", która staje
+                    się bardzo popularna w Japonii. Oyama zostaje
+                    zaproszony przez F.B.I. I West Point na pokazy i wykłady.
+                    W Bangkoku, po wyzwaniu rzuconym przez Boks
+                    Tajlandzki, dochodzi do walk publicznych z bokseromi
+                    Thai - Japończycy wygrywają dwie z trzech rozegranych
+                    walk. W 1962 roku Oyama nadaje w swoim dojo
+                    pierwszych 20 czarnych pasów swoim uczniom.</p>
+                    
+                    <p>1 października 1963 roku powstaje Międzynarodowa
+                        Organizacia Karate Kyokushinkai, z centralnym dojo
+                Honbu w Tokyo. Były premier Japonii E. Sato, laureat
+                nagrody Nobla, zostaje prezydentem organizacji.
+                Rokrocznie rozpoczęto organizacię obozów letnich
+                i zimowych oraz mistrzostw Japonii Kyokushin. W 1975
+                roku odbywają sie pierwsze Otwarte Mistrzostwa Swiata
+                Wszechstyli - zwycięża K. Sato z Kyokushin Tokyo.
+                Aktualnie Międzynarodowa Organizacja Kyokushin Karate jest najbardziej
+                dynamiczną i liczną organizacją karate na świecie. W
+                ponad 120 krajach kyokushin uprawia ponad 2 milony ludzi.
+            </p>
+            <p>Twórca Kyokushin postanowił propagować swoje karate
+                na całym świecie. Był pewien, że jest ono nie tylko sztuką
+                walki, ale przede wszystkim nośnikiem tradycji i kultury Dalekiego Wschodu -
+                wartości etycznych głoszonych przez Konfucjusza i Lao-Tse. Oyama zawsze powtarzał
+                swoim uczniom, że karate zaczyna się i kończy na
+                uprzejmości i że o ile rozwój fizyczny jest początkiem tej
+                sztuki, o tyle rozwój duchowy jest celem ostatecznym.
+                Dla lepszego wyeksponowania zasad etycznych
+                kyokushin Japończycy stworzyli siedmiopunktowy kodeks
+                moralny tej sztuki walki zwany "Przysięgą dojo" Jest W
+                nim mowa o obowiązku szanowania starszych i rodziców, dążeniu
+                do fizycznej i duchowej doskonałości oraz
+                powstrzymywaniu sie od gwałtowności. W listopadzie 1993 roku
+                "Ostatni Samuraj" przybył do Polski z okazji odbywającego się w
+                Katowicach Pucharu Europy w Kyokushin Karate "Oyama Cup". Była to jego ostatnia
+                podróż zagraniczna. Masutatsu Oyama zmarł na raka płuc 26 kwietnia 1994 roku. Miat
+                71 lat.</p>
+                
+                <div class="oyama">
+                    <div class="oyama-text">
+                <p>"Nakreśliłem drogę rozwoju międzynarodowego Budo
+                    Karate, które jest dostępne dla każdego człowieka na
+                    świecie" pisał Masutatsu Oyama pod koniec życia - uważam,
+                    że kyokushin karate może być nośnikiem mądrości tradycji płynących z orientalnej
+                kultury, która
+                przecież tak silnie związana jest ze współczesnym światem. Nawet kiedy umrę, mam
+                nadzieję, że kyokushin nadal będzie rozwijało się tak długo, jak długo bẹdzie
+                istniał rodzaj ludzki. Uważam, że karate jest najmocniejszą sztuką walki na Ziemi, a
+                kyokushin
+                najsilniejszą ze wszystkich. Uczy ono bowiem przyjmować wyzwania i stawiać im czoło
+                poczuciu ducha walki.</p>
+                
+            </div>
+           <div class="oyama-img">
+               <Image src={oyama} alt="Masutatsu Oyama">
+           </div>
+   </div>
+
+
+
+
+            <p><span>KYOKUSHIN</span><br>
+                Kyokushin jest nazwą stylu karate bazującego na
+                najskuteczniejszych elementach technicznych w naukowej metodyce treningów wzbogacanych o
+                cwiczenia relaksacyjno - koncentrujące Zen wraz z etykietą i elementami filozofii Zen. </p>
+
+            <div class="kyoku-img">
+                <Image src={kyokushin} alt="kyoku shin kan">
+            </div>
+
+            <p>Kyoku znaczy ostateczny, zasadniczy lub podstawowy,
+                Shin to prawda lub rzeczywistość, Kai znaczy przyłączyć
+                się, wziąć udział. Symbolem Karate Kyokushinkai jest Kanku, które bierze swój początek z
+                Kanku
+                kata. W kata tym ręce wznosza się
+                ku górze do pozycji, gdy przy otwartych dłoniach
+                odwiedzionych kciukach opuszki palców wskazujących i
+                kciuków stykają się. Tak właśnie powstaje
+                powyższy symbol. Ostre wierzchołki - palce wyobrażają
+                skrajność, szczyt czegoś. Szerokie odcinki -
+                okolice nadgarstków oznaczają siłę, środek oznacza nieskończoność i głębię.
+            </p>
+            <p>Kanku umieszczony w okręgu oznacza ciąłość i okrężny ruch.</p>
+
+            <div class="kanku-img">
+                <Image src={KankuKyokushin} alt="kyokushin kanku">
+            </div>
+
+            <p>Po śmieci twórcy stylu Kyokushin Masutatsu Oyamy w 1994 roku Międzynarodowa Organizacja
+                Karate (IKO) rozbiła się na kilka innych grup. Jeden z najlepszych uczniów Oyamy – Kenji
+                Midori założył Shinkyokushin tworząc organizację alternatywną do IKO pod nazwą World Karate
+                Organisation (WKO) zwaną też IKO2.</p>
+
+            <div class="shin-img">
+                <Image src={shinkyokushin} alt="kyoku shin kai">
+            </div>
+
+            <p>Założeniem Shinkyokushin jest kontynuowanie nauk Masutatsu Oyama i propagowanie filozofii
+                kyokushin. Shihan Midori upatruje esencję karate w słowach Oyamy: „Trzymaj głowę nisko (bądź
+                pokorny), oczy wysoko (bądź ambitny), miej usta zamknięte (bądź opanowany i spokojny
+                wewnętrznie) bądź posłuszny wobec starszych i dawaj coś z siebie innym”. Kontynuując
+                filozofię Kyokushin, Midori dodał pojęcie „Shin” co oznacza „umysł”. Głównym celem
+                Shinkyokushin staje się zatem doskonalenie umysłu, co w swym ostatecznym wyrazie ma
+                przyczyniać się do szerzenia pokoju na świecie.</p>
+
+            <div class="kankuShin-img">
+                <Image src={shinkyokushinKanku} alt="shinkyokushin kanku">
+            </div>
+
+        </div>
+
+        </Section>
+
+
+        <Section sectionTitle="Wymagania Egzaminacyjne Senior">
+
+        </Section>
+        
+        <Section sectionTitle="Wymagania Egzaminacyjne junior">
+
+        </Section>
+        
+    <Footer />
   </body>
 </html>
+
+<style>
+.history-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 35px;
+
+}
+.history-text-container p {
+  margin-bottom: 2em;
+  font-size: 1.8rem;
+}
+.history-text-container span {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.bodhidarma,
+.funakoshi,
+.oyama {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bodhidarma-img,
+.funakoshi-img,
+.oyama-img,
+.kyoku-img,
+.kanku-img,
+.shin-img,
+.kankuShin-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.bodhidarma-img img,
+.funakoshi-img img,
+.oyama-img img,
+.kyoku-img img,
+.kanku-img img,
+.shin-img img,
+.kankuShin-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.funakoshi {
+  margin-bottom: 30px;
+}
+
+</style>

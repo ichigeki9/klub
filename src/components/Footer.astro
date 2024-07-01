@@ -27,6 +27,7 @@ import logoShinKanku from '../img/Loga/shinkanku.png'
 
             <div class="footer-contact">
                 <h4>Kontakt</h4>
+                <div class="footer-contact-info-box">
                 <div class="footer-contact-info"><i class="fa-solid fa-location-dot"></i>
                     <p>19-300 Ełk ul. Bora Komorowskiego 1</p>
                 </div>
@@ -39,6 +40,7 @@ import logoShinKanku from '../img/Loga/shinkanku.png'
                 <div class="footer-contact-info"><a href="https://www.facebook.com/karate.elk"><i class="fa-brands fa-facebook"></i>
                     <p>Ełcki Klub Karate Kyokushin</p></a>
                 </div>
+              </div>
             </div>
 
 
@@ -72,6 +74,8 @@ import logoShinKanku from '../img/Loga/shinkanku.png'
 
 <style>
 
+ 
+
   .logo-box{
     display: flex;
     align-items: center;
@@ -84,9 +88,10 @@ import logoShinKanku from '../img/Loga/shinkanku.png'
 }
 
 .logo-box img{
-  width: 9rem;
-  height: 8rem;
+  width: 2rem;
+  height: 3rem;
   object-fit: contain;
+
   }
 .footer-menu {
   display: flex;
@@ -101,11 +106,17 @@ import logoShinKanku from '../img/Loga/shinkanku.png'
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   order: 2;
-  /* width: 60%; */
-  width: 100%;
+  width: 50%;
   height: 100%;
-  /* height: 180px; */
+  
+}
+.footer-contact-info-box{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
 }
 
 .footer-menu .footer-contact h4 {
@@ -114,9 +125,11 @@ import logoShinKanku from '../img/Loga/shinkanku.png'
 }
 .footer-menu .footer-contact-info {
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: center; */
+  /* justify-content: flex-start; */
   align-items: center;
-  padding-left: 10px;
+  
+
 }
 .footer-menu .footer-contact-info i {
   margin-right: 10px;
@@ -124,6 +137,7 @@ import logoShinKanku from '../img/Loga/shinkanku.png'
 }
 .footer-menu .footer-contact-info p {
   font-size: 1rem;
+  text-align: left;
 }
 .footer-menu .footer-contact-info a {
   display: flex;
@@ -135,27 +149,24 @@ import logoShinKanku from '../img/Loga/shinkanku.png'
 
 
 .footer-menu .footer-link-box {
-  order: 3;
-  width: 30%;
-  height: 180px;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  text-align: center;
+  flex-direction: column;
+  order: 3;
+  width: 40%;
+  height: 100%;
 }
 .footer-menu .footer-link-box h4 {
-  margin-top: 5px;
   font-size: 1.5rem;
   text-align: center;
 }
 .footer-menu .footer-link-box a {
-  padding: 0 15px;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-align: center;
   text-decoration: none;
   color: black;
   transition: color 0.5s;
+  margin-bottom: 2.5rem;
 }
 .footer-menu .footer-link-box a:hover {
   color: #3166ff;
@@ -163,7 +174,7 @@ import logoShinKanku from '../img/Loga/shinkanku.png'
 
 .footer-img {
   display: flex;
-  width: 60%;
+  width: 40%;
   height: 100%;
 }
 .footer-img img {

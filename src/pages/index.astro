@@ -4,11 +4,20 @@ import '../styles/global.css';
 import logo from '../img/logo.png'
 import ImgBgBig from '../img/mainBg-big.jpg'
 import ImgBgSmall from '../img/mainBg-small.jpg'
+import team from '../img/Team.jpg'
+import dojo from '../img/sala.jpg'
+import kimono from '../img/Kimono.png'
+import brain from '../img/brain.png'
+import kick from '../img/kick.png'
+import fists from '../img/fist.png'
+import grafik from '../img/Grafik.png'
+
+
+
+
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import Section from '../layouts/Section.astro';
-
-
 ---
 
 <html lang="pl">
@@ -18,6 +27,9 @@ import Section from '../layouts/Section.astro';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
     <title>Ełcki Klub Karate Shinkyokushin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c6f29183f5.js" crossorigin="anonymous"></script>
   </head>
 <body>
@@ -40,10 +52,181 @@ import Section from '../layouts/Section.astro';
       <!-- <section class="about">
         <h2> o nas</h2>
       </section> -->
-      <Section sectionTitle="o nas">
-        <p>wadadasssssssssssssssssd</p>
+      <Section sectionTitle="o nas" sectionColor="white">
+        <div class="about-us__box">
+
+          <div class="about-us__box-img">
+              <Image src={team} alt="Trenerzy" class="about-us__img">
+          </div>
+          <div class="about-us__box-text">
+              <p class="about-us__text">Ełcki Klub Sportowy Karate Kyokushin to istniejący w Ełku
+                  nieprzerwanie od 45 lat i nadal prężnie się rozwijający klub sportowy!
+                  To grono niezwykłych ludzi z pasją, którzy ten klub tworzą!
+                  To szczególne miejsce umożliwiające realizację sportowych ambicji na różnym poziomie! <br>
+                  <br>
+                  Przyjdź i sprawdź sam!
+                                </p>
+          </div>
+
+
+      </div>
       </Section>
 
+      <Section sectionTitle="Trenuj z Nami" sectionColor="blue">
+        <div class="card-container">
+
+          <div class="card one">
+            <div class="card-img train-us-one"></div>
+            <div class="card-text">
+              <h3 class="train-us__title">Nowoczesny Klub</h3>
+                            <p class="train-us__text">
+                                Nowoczesna klimatyzowana sala treningowa umożliwia zróżnicowane
+                                treningi dopasowane do indywidualnych celów. Wysokiej jakości sprzęt sprzyja wygodzie i bezpieczeństwu podczas ćwiczeń, a estetyczny design tworzy motywujące otoczenie.
+                                Klub dysponuje dwiema salami treningowymi, zewnętrznym parkiem treningowym oraz siłownią. 
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img train-us-two"></div>
+            <div class="card-text">
+              <h3 class="train-us__title">Wykwalifikowana kadra</h3>
+                            <p class="train-us__text">
+                              Wykwalifikowana kadra to niezwykle istotny element każdej
+                              dziedziny, zapewniający wysoki poziom profesjonalizmu i kompetencji. Wykwalifikowani
+                              instruktorzy są w stanie dostosować plany treningowe do indywidualnych potrzeb i
+                              umiejętności każdej osoby, co przekłada się na lepsze rezultaty. 
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img train-us-three"></div>
+            <div class="card-text">
+              <h3 class="train-us__title">Wyjazdy</h3>
+                            <p class="train-us__text">
+                              Dużą zaletą trenowania karate są również wyjazdy - obozy,
+                              seminaria, zawody na różnym poziomie. Atutem takich wydarzeń jest przede wszystkim
+                              zdobywanie nowych umiejętności i ich doskonalenie. Ważnym elementem jest również
+                              możliwość nawiązywania kontaktów z nowopoznanymi ludźmi dzielącymi tą samą pasję. 
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img train-us-four"></div>
+            <div class="card-text">
+              <h3 class="train-us__title">Pasja</h3>
+                            <p class="train-us__text">
+                              Pasja do karate to głębokie zaangażowanie, które prowadzi do
+                              ciągłego doskonalenia swoich umiejętności i poznawania filozofii tej sztuki walki.
+                              Pasjonaci karate wyznają zasady szacunku, samoograniczenia i ducha sportowej
+                              rywalizacji, które wpływają na ich codzienne życie. Ta pasja może przynieść głęboką
+                              satysfakcję, rozwijając nie tylko umiejętności fizyczne, ale także charakter,
+                              cierpliwość i wytrwałość. 
+            </div>
+          </div>
+
+        </div>
+
+      </Section>
+
+      <Section sectionTitle="Dołącz do nas" >
+
+        <div class="circles">
+
+          <div class="circle-box one">
+              <div class="circle-img">
+                  <Image src={kimono} alt="kimono">
+              </div>
+              <div class="circle-text">
+                  <p>Poznaj sztukę karate</p>
+              </div>
+          </div>
+
+          <div class="circle-box two">
+              <div class="circle-img">
+                  <Image src={brain}alt="mózg">
+              </div>
+              <div class="circle-text">
+                  <p>Zapanuj nad swoim umysłem</p>
+              </div>
+          </div>
+
+          <div class="circle-box three">
+              <div class="circle-img">
+                  <Image src={kick} alt="kopiące postacie">
+              </div>
+              <div class="circle-text">
+                  <p>Popraw kondycje fizyczną i wzmocnij swoje ciało</p>
+              </div>
+          </div>
+
+          <div class="circle-box four">
+              <div class="circle-img">
+                  <Image src={fists} alt="ręce">
+              </div>
+              <div class="circle-text">
+                  <p>Naucz się bronić </p>
+              </div>
+          </div>
+
+      </div>
+
+      </Section>
+
+      <Section sectionTitle="Harmonogram Treningów" >
+
+        
+          
+          <div class="schedule-box">
+              <Image class="schedule" src={grafik} alt="Grafik Treningow">
+          </div>
+
+      </Section>
+
+
+      <Section sectionTitle="Aktualności" >
+
+        <div class="card-container">
+
+          <div class="card news">
+            <div class="card-img news-one"></div>
+            <div class="card-text">
+              <h3 class="news-title">Letni obóz karate</h3>
+                            <p class="news-text">
+                              W lipcu w Kątach Rybackich odbył się 10-cio dniowy letni obóz karate dla dzieci i
+                              młodzieży, zorganizowany przez Kluby karate z Grajewa, Giżycka i Ełku. Oprócz treningów
+                              karate odbyło się wiele atrakcji w formie aktywnego wypoczynku wykorzystując pobyt przy
+                              nadmorskich plażach.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img news-two"></div>
+            <div class="card-text">
+              <h3 class="news-title">Egzamin na stopnie kyu</h3>
+                            <p class="news-text">
+                              W czerwcu karatecy w Ełckim Klubie Karate walczyli o kolejne pasy. Był stres, emocje i
+                                walka do samego końca. Jak w życiu, jak na każdym egzaminie jednym się powiodło inni
+                                muszą spróbować raz jeszcze, bo warto walczyć i wierzyć w siebie. Wiele osób po seriach
+                                ćwiczeń wzniosło się na wyżyny swoich możliwości i za to należy się szacunek i
+                                gratulacje ! Osu !
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img news-three"></div>
+            <div class="card-text">
+              <h3 class="news-title">Mistrzostwa Europy Kadetów</h3>
+                            <p class="news-text">
+                              24 czerwca dwóch zawodników Ełckiego Klubu reprezentowało Polskę na Mistrzostwach Europy
+                                Kadetów na Węgrzech. Niestety po starciu z bardzo doświadczonymi przeciwnikami Piotrek
+                                Wenda i Oliwier Wrzosek wrócili bez medalu, lecz z motywacją do dalszej pracy. 
+            </div>
+          </div>
+  
+
+        </div>
+
+
+      </Section>
 
     </main>
   
@@ -73,10 +256,10 @@ import Section from '../layouts/Section.astro';
           position: relative;
           width: 100vw;
           height: 100vh;
+
           
         }
         .header-bg{
-          
           width: 100%;
           height: 100%;
           display: flex;
@@ -145,16 +328,209 @@ import Section from '../layouts/Section.astro';
         .about{
           width: 100vw;
           height: 100vh;
-          background-color: #6b6a6a;
+          /* background-color: #6b6a6a; */
         }
+        .about-us__box{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem 3rem;
+        }
+        .about-us__box-img{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 50%;
+        }
+        .about-us__box-img img{
+          width: 100%;
+          height: 100%;
+          /* width: 90%;
+          height: 90%; */
+          border-radius: 3%;
+        }
+        .about-us__box-text{
+          text-align: left;
+          width: 100%;
+          height: 50%;
+        }
+        .about-us__text{
+          font-size: 1.2rem;
+        }
+        /* ========================================= */
+      /* /// MAIN - SECTION ABOUT  */
+      /* ========================================= */
+        /* ========================================= */
+        /*  MAIN - SECTION TRAIN WITH US */
+        /* MAIN - SECTION NEWS */
+        /* ========================================= */
+          .card-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 3rem;
+          }
+          .card{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            overflow: hidden;
+          }
+          .card-img {
+            display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 20rem;
+          border-bottom: 1px solid black;
+          background-position: center;
+          background-size: cover;
+        }
+        .train-us-one{
+            background-image: url('../img/sala.jpg');
+          }
+        .train-us-two{
+            background-image: url('../img/kadran.jpg');
+          }
+        .train-us-three{
+            background-image: url('../img/morze.jpg');
+          }
+        .train-us-four{
+            background-image: url('../img/pasja.jpg');
+          }
+          /* 
+          ----------
+          */
+          .news-one{
+            background-image: url('../img/wyjazdy.jpg');
+          }
+          .news-two{
+            background-image: url('../img/egzamin.jpg');
+          }
+          .news-three{
+            background-image: url('../img/msEuropy.jpg');
+          }
 
+          /* .card-img img{
+            width: 100%;
+          height: 100%;
+          object-fit: contain;
+          } */
+
+          .card-text{
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+          text-align: left;
+          padding: 0 1rem;          
+          }
+          .card-text p{
+            font-size: 1.2rem;
+          }
+          .card-text h3{
+            
+            font-size: 1.8rem;
+            margin-bottom: 0.1rem;
+          }
           /* ========================================= */
-        /* // MAIN - SECTION ABOUT  */
+        /* /// MAIN - SECTION TRAIN WITH US */
+         /* /// MAIN - SECTION NEWS */
         /* ========================================= */
 
+         /* ========================================= */
+        /*  MAIN - SECTION JOIN TO US */
+        /* ========================================= */
+          .circles{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+
+          .circle-box{
+            margin: 2.4rem;
+            height: 200px;
+            width: 160px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .circle-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+          }
+          .circle-img img{
+            width: 60%;
+            height: 60%;
+            transition: scale 1s;
+          }
+          .circle-img:hover img {
+          scale: 1.1;
+          }
+          .circle-text {
+           margin-top: 15px;
+           height: 25%;
+           width: 180px;
+           text-align: center;
+           font-size: 1.1rem;
+          }
+
+         /* ========================================= */
+        /* // MAIN - SECTION JOIN TO US  */
+        /* ========================================= */
+        
+         /* ========================================= */
+        /*  MAIN - SCHELDUE  */
+        /* ========================================= */
+        
+        .schedule-box {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+          width: 100%;
+          height: 100%;
+        margin-top: 3rem;
+        }
+        .schedule{
+          width: 85%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+         /* ========================================= */
+        /* // MAIN - SCHELDUE  */
+        /* ========================================= */
+
+
+        @media(min-width: 576px){
+     
+        }
         @media(min-width: 768px){
      
         }
+        @media(min-width: 992px){
+     
+        }
+        @media(min-width: 1200px){
+     
+        }
+
+
 
 
   

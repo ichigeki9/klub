@@ -1,5 +1,8 @@
 ---
-
+import '../styles/global.css';
+   import Navigation from '../components/Navigation.astro';
+    import Footer from '../components/Footer.astro';
+    import Section from '../layouts/Section.astro';
 ---
 <html lang="en">
   <head>
@@ -8,12 +11,76 @@
     <title>Klucz</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+ 
+    <Navigation/>
+        <Section sectionTitle="Kontakt">
 
-    <h1>kONTAKT</h1>
-    <p>BBBB</p>
+          <div class="contact__box">
+            <p class="contact-text">
+                Ełcki Klub Karate Kyokushin <br>
+                19-300 Ełk, ul. Bora Komorowskiego 1 <br>
+                NIP 8481195256 <br>
+                REGON 790108174 <br>
+                Numer rachunku do wpłaty składki: <br> 83 2030 0045 1110 0000 0074 3280 <br>
+                
+                Remigiusz Karpiński <br>
+                tel. 503 011 707 <br>
+                e-mail: biuro@karate.elk.pl
+
+            </p>
+            <div class="map">
+                <h2>Tu trenujemy</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d881.8527740423633!2d22.363843793817047!3d53.83816646134893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e1bbd1ee363d99%3A0x27a4dc2700ae1a27!2sKyokushin.%20Klub%20karate!5e0!3m2!1spl!2spl!4v1690539269015!5m2!1spl!2spl"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- <iframe scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas"
+                    src="https://maps.google.com/maps?width=603&amp;height=479&amp;hl=en&amp;q=BORA%20KOMOROWSKIEGO%20E%C5%82k+(kyokushin.%20Klub%20karate)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href='https://maps-generator.com/'>Maps
+                    Generator</a> -->
+
+                
+
+
+            </div>
+        </div>
+
+        </Section>
+    <Footer />
     
   </body>
 </html>
+
+<style>
+  .contact__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-text {
+  margin-top: 10px;
+  margin-bottom: 2em;
+  padding: 10px 15px;
+  font-size: 1.8rem;
+  line-height: 35px;
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+.map {
+  margin: 0 auto;
+}
+.map h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+</style>
