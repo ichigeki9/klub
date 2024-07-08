@@ -8,11 +8,14 @@ import '../styles/global.css';
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width" />
-    <title>Klucz</title>
+    <title>Kontakt</title>
   </head>
   <body>
  
     <Navigation/>
+
+    <main>
+
         <Section sectionTitle="Kontakt">
 
           <div class="contact__box">
@@ -26,25 +29,27 @@ import '../styles/global.css';
                 Remigiusz Karpiński <br>
                 tel. 503 011 707 <br>
                 e-mail: biuro@karate.elk.pl
+                
+              </p>
+            </div>
+          </Section>
 
-            </p>
+          <Section sectionTitle="Tu Trenujemy">
+
+            
             <div class="map">
-                <h2>Tu trenujemy</h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d881.8527740423633!2d22.363843793817047!3d53.83816646134893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e1bbd1ee363d99%3A0x27a4dc2700ae1a27!2sKyokushin.%20Klub%20karate!5e0!3m2!1spl!2spl!4v1690539269015!5m2!1spl!2spl"
-                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <!-- <iframe scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas"
+                
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d881.8527740423633!2d22.363843793817047!3d53.83816646134893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e1bbd1ee363d99%3A0x27a4dc2700ae1a27!2sKyokushin.%20Klub%20karate!5e0!3m2!1spl!2spl!4v1690539269015!5m2!1spl!2spl"
+              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <!-- <iframe scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas"
                     src="https://maps.google.com/maps?width=603&amp;height=479&amp;hl=en&amp;q=BORA%20KOMOROWSKIEGO%20E%C5%82k+(kyokushin.%20Klub%20karate)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href='https://maps-generator.com/'>Maps
                     Generator</a> -->
 
-                
-
-
-            </div>
-        </div>
-
-        </Section>
+                  </div>
+                </Section>
+</main>
     <Footer />
     
   </body>
@@ -62,8 +67,8 @@ import '../styles/global.css';
   margin-top: 10px;
   margin-bottom: 2em;
   padding: 10px 15px;
-  font-size: 1.8rem;
-  line-height: 35px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   text-align: center;
 }
 
@@ -74,7 +79,7 @@ iframe {
 }
 
 .map {
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 .map h2 {
   text-align: center;
@@ -82,5 +87,40 @@ iframe {
   font-size: 3rem;
   text-transform: uppercase;
 }
+
+@media(min-width: 576px){
+  .contact-text {
+    line-height: 2.8rem;
+  font-size: 1.7rem;
+  }
+
+  iframe {
+  width: 30rem;
+  height: 30rem;
+  border: none;
+  }
+}
+@media(min-width: 768px){
+  .contact-text {
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+  
+  iframe {
+  width: 35rem;
+  height: 35rem;
+  border: none;
+  }
+ 
+
+}
+@media(min-width: 992px){
+  iframe {
+  width: 40rem;
+  height: 40rem;
+  border: none;
+  }
+}
+
 
 </style>

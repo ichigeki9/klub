@@ -27,6 +27,8 @@ import sala from '../img/sala.jpg'
   
     <Navigation/>
 
+    <main>
+
     <Section sectionTitle="Nasz klub">
 
       <div class="gallery-container">
@@ -149,7 +151,7 @@ import sala from '../img/sala.jpg'
             <button><i class="far fa-question-circle"></i></button>
             <div class="instructor-text">
                 <h3>Patryk Karpiński</h3>
-                <h4>2 DAN</h4>
+                <span>2 DAN</span>
                 <p>Karate trenuje od 8go roku życia. Od tego czasu prowadzi aktywny tryb życia, spełnia się nie
                     tylko jako instruktor karate ale również trener personalny oraz instruktor samoobrony.
                     Uczestnik mistrzow Polski oraz Europy. Na codzień Ratownik Medyczny.</p>
@@ -160,7 +162,7 @@ import sala from '../img/sala.jpg'
             <button><i class="far fa-question-circle"></i></button>
             <div class="instructor-text">
                 <h3>Krzysztof Mieczławski</h3>
-                <h4>3 DAN</h4>
+                <span>3 DAN</span>
                 <p>Swoją przygodę z karate zaczął w 1982r. Już od ponad 23 lat realizuje się jako instruktor
                     prowadząc treningi dla dzieci oraz młodzieży. Na codzień starszy inspektor Straży Miejskiej
                 </p>
@@ -172,7 +174,7 @@ import sala from '../img/sala.jpg'
             <button><i class="far fa-question-circle"></i></button>
             <div class="instructor-text">
                 <h3>Iga Wałejko</h3>
-                <h4>1 DAN</h4>
+                <span>1 DAN</span>
                 <p>Swoją przygodę z karate rozpoczęła jako 9 letnia dziewczynka. Uczestniczka Mistrzostw Polski
                     oraz Europy. Stale rozwija swoje umiejętności biorąc udział w obozach, seminariach oraz
                     kursach. Od 5 lat spełnia się w roli instruktora prowadząc treningi najmłodszym członkom
@@ -184,7 +186,7 @@ import sala from '../img/sala.jpg'
             <button><i class="far fa-question-circle"></i></button>
             <div class="instructor-text">
                 <h3>Magdalena Malinowska</h3>
-                <h4>2 DAN</h4>
+                <span>2 DAN</span>
                 <p>Karate trenuje od ponad 20 lat, uczestniczka mistrzostw Polski oraz Europy, instruktor grup
                     dzieci oraz dorosłych a także sędzia krajowy. Na codzień realizuje się jako pracownik
                     samorządowy. </p>
@@ -195,7 +197,7 @@ import sala from '../img/sala.jpg'
             <button><i class="far fa-question-circle"></i></button>
             <div class="instructor-text">
                 <h3>Remigiusz Karpiński</h3>
-                <h4>6 DAN</h4>
+                <span>6 DAN</span>
                 <p>Prezes EKKK, Prezes Polskiej Federacji Karate Shinkyokushin oraz wiceprezydent Światowej Organizacji Karate Shinkyokushin. Karate trenuje od ponad 40 lat. Wieloletni trener, który wychował kilka pokoleń karateków.   </p>
             </div>
         </div>
@@ -204,7 +206,7 @@ import sala from '../img/sala.jpg'
             <button><i class="far fa-question-circle"></i></button>
             <div class="instructor-text">
                 <h3>Marcin Stemborowski</h3>
-                <h4>2 DAN</h4>
+                <span>2 DAN</span>
                 <p>Karate trenuje od 18 lat. Doświadczony instruktor stale rozwijający swoje umiejętności.
                     Uczestniczył w mistrzostwach Polski oraz Europy. Preferuje aktywny styl życia również poza
                     dojo.
@@ -280,6 +282,8 @@ import sala from '../img/sala.jpg'
     </div>
 
     </Section>
+
+    </main>
 <Footer />
    
   </body>
@@ -291,12 +295,13 @@ import sala from '../img/sala.jpg'
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  line-height: 25px;
+  line-height: 2.1rem;
   font-size: 1.5rem;
 }
 .rules h3 {
   font-size: 1.8rem;
   margin: 40px 0;
+  text-transform: uppercase;
 }
 .rules .nonDotted {
   list-style: none;
@@ -305,7 +310,7 @@ import sala from '../img/sala.jpg'
 .links {
   display: flex;
   flex-direction: column;
-  margin-top: 4em;
+  margin: 4em 0;
 }
 .links a {
   font-size: 20px;
@@ -388,30 +393,35 @@ import sala from '../img/sala.jpg'
 .intructor-cards {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  
 }
-.intructor-cards .patryk {
+ .patryk {
   background-image: url("../img/Patryk.jpg");
 }
-.intructor-cards .iga {
+ .iga {
   background-image: url("../img/iga.jpg");
 }
-.intructor-cards .magda {
+ .magda {
   background-image: url("../img/magda.jpg");
 }
-.intructor-cards .remigiusz {
+.remigiusz {
   background-image: url("../img/remigiusz.jpg");
 }
-.intructor-cards .krzysiek {
+.krzysiek {
   background-image: url("../img/krzysiek.jpg");
 }
-.intructor-cards .marcin {
+.marcin {
   background-image: url("../img/Marcin.jpg");
 }
-.intructor-cards .card {
+ .card {
   position: relative;
   margin: 10px;
   height: 500px;
-  width: 90%;
+  width: 60%;
   text-align: center;
   background-position: center;
   background-size: cover;
@@ -419,7 +429,7 @@ import sala from '../img/sala.jpg'
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
   overflow: hidden;
 }
-.intructor-cards .card button {
+ .card button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -432,16 +442,16 @@ import sala from '../img/sala.jpg'
   cursor: crosshair;
   z-index: 4;
 }
-.intructor-cards .card .instructor-text {
+ .instructor-text {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: start;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 40px 20px;
+  padding: 0 1rem;
   background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
   -webkit-clip-path: circle(0% at 50% 90%);
@@ -450,22 +460,74 @@ import sala from '../img/sala.jpg'
   transition: clip-path 0.8s;
   transition: clip-path 0.8s, -webkit-clip-path 0.8s;
 }
-.intructor-cards .card h3 {
-  margin-bottom: 5px;
+.card h3 {
+  margin-bottom: 1rem;
   color: rgb(182, 179, 97);
-  font-size: 3rem;
-}
-.intructor-cards .card h4 {
-  margin-bottom: 40px;
   font-size: 2rem;
+}
+.card span {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
   color: rgb(141, 138, 138);
 }
-.intructor-cards .card p {
-  font-size: 1.7rem;
+.card p {
+  font-size: 1.3rem;
 }
-.intructor-cards .card button:hover ~ .instructor-text {
+.card button:hover ~ .instructor-text {
   -webkit-clip-path: circle(120% at 50% 90%);
           clip-path: circle(120% at 50% 90%);
 }
+
+@media(min-width: 576px){
+
+  
+}
+
+@media(min-width: 768px){
+    
+    .gallery-container img{
+      width: 15rem;
+      height: 12rem;
+    }
+
+    .intructor-cards{
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    .card{
+    width: 40%;
+    }
+    
+  }
+  
+  @media(min-width: 992px){
+    .gallery-container img{
+      width: 17rem;
+      height: 14rem;
+    }
+    .card{
+    width: 40%;
+    }
+  }
+  
+  @media(min-width: 1200px){
+    .gallery-container img{
+      width: 20rem;
+      height: 17rem;
+    }
+    .card{
+    width: 30%;
+    }
+    
+}
+
+
+
+
+
+
+
+
 
 </style>
