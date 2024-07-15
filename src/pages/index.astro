@@ -53,7 +53,7 @@ import Section from '../layouts/Section.astro';
   <div class="mainHeader">
     <Image class='mainLogo' src={logo} alt="logo klubu"/>
     <h1>Ełcki Klub Karate <br>Shinkyokushin</h1>
-    <button>poznaj nas</button>
+    <button class="mainBtn">poznaj nas</button>
   </div>
       
     </header>
@@ -199,7 +199,7 @@ import Section from '../layouts/Section.astro';
       </Section>
 
 
-      <Section sectionTitle="Aktualności" >
+      <!-- <Section sectionTitle="Aktualności" >
 
         <div class="card-container card-news-container">
 
@@ -248,7 +248,7 @@ import Section from '../layouts/Section.astro';
         </div>
 
 
-      </Section>
+      </Section> -->
 
     </main>
   
@@ -256,7 +256,15 @@ import Section from '../layouts/Section.astro';
     <Footer />
 
   <script>
-      
+      const mainBtn = document.querySelector('.mainBtn')
+      // const aboutDiv = document.querySelector('.about-us__box')
+
+
+      const element = document.querySelector('.about-us__box')
+      // element.scrollIntoView();
+
+      mainBtn.addEventListener('click', () => element.scrollIntoView({ behavior: "smooth",block: "center"}))
+
    </script>
 
 
@@ -276,8 +284,7 @@ import Section from '../layouts/Section.astro';
           height: 100vh;
           width: 100vw;
           position: relative;
-          width: 100vw;
-          height: 100vh;
+      
 
           
         }
@@ -389,7 +396,6 @@ import Section from '../layouts/Section.astro';
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 1rem 3rem;
           }
           .card-news-container{
           width: 90%;
@@ -764,7 +770,24 @@ import Section from '../layouts/Section.astro';
             font-size: 1.5rem;
           }
       }
+      
         
+      @media (orientation: landscape) and (max-height:678px ) {
+        .mainLogo{
+          margin-top: 5rem;
+          width: 90px;
+          height: 90px;
+        }
+        .mainHeader h1{
+          font-size: 1.5rem;
+        }
+        .mainHeader button{
+          padding: 0.8rem 1.3rem;
+          font-size: 1rem;
+        }
+
+        }
+     
 
 
 

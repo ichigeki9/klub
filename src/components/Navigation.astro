@@ -40,7 +40,7 @@ import logo from '../img/logo.png'
     position: fixed; 
     z-index: 10;
     width: 100%;
-    padding-block: 1.2rem ;
+    padding-block: 0.5rem ;
     background-color:rgba(0, 0, 0, 0.7) ;
     
     transition: background-color 800ms cubic-bezier(0.64,0.04,0.26,0.87);
@@ -60,8 +60,8 @@ import logo from '../img/logo.png'
       }
         .navLogo{
           margin-inline:0.5rem;
-          width: 5rem;
-          height: 5rem;
+          width: 4rem;
+          height: 4rem;
         }
         .nav-links {
           display: flex;
@@ -153,8 +153,26 @@ import logo from '../img/logo.png'
  
     }
     @media(min-width: 1200px){
+      .navLogo{
+          margin-inline:0.5rem;
+          width: 5rem;
+          height: 5rem;
+        }
  
     }
+    @media (orientation: landscape) and (max-height:678px ) {
+      .navLogo{
+          margin-inline:0.5rem;
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      
+        .nav-links li{
+          font-size: 1rem;
+        }
+      
+      }
+      
 
 </style>
 
