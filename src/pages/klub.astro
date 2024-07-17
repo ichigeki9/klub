@@ -24,7 +24,7 @@ import sala from '../img/sala.jpg'
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width" />
     <script src="https://kit.fontawesome.com/c6f29183f5.js" crossorigin="anonymous"></script>
-    <title>Klub</title>
+    <title>Ełcki Klub Karate Shinkyokushin | Klub</title>
   </head>
   <body>
     
@@ -32,6 +32,20 @@ import sala from '../img/sala.jpg'
     <Navigation/>
 
     <main>
+
+
+      <div class="popup hidden">
+        <div class="cross">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="arrow_right">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="arrow_left">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <img src="" alt="">
+    </div>
 
     <Section sectionTitle="Nasz klub">
 
@@ -284,7 +298,138 @@ import sala from '../img/sala.jpg'
   </body>
 </html>
 
+<script>
+const images = document.querySelectorAll(".gallery-container img");
+const popup = document.querySelector(".popup");
+const popupImg = document.querySelector(".popup img");
+const cross = document.querySelector(".cross");
+const arrowLeft = document.querySelector(".arrow_left");
+const arrowRight = document.querySelector(".arrow_right");
+
+let curretIndex;
+
+// const showPopup = (e) => {
+// 	// let imgSrc;
+
+// 	// imgSrc = e.target.src;
+
+// };
+
+const closePopup = () => {
+	popup.classList.add("hidden");
+};
+
+cross.addEventListener("click", closePopup);
+
+images.forEach((image, index) => {
+	image.addEventListener("click", (e) => {
+		popup.classList.remove("hidden");
+		popupImg.src = e.target.src;
+		curretIndex = index;
+	});
+});
+
+arrowRight.addEventListener("click", () => {
+	if (curretIndex === images.length - 1) {
+		curretIndex = 0;
+    } else {
+        curretIndex++;
+    }
+	popupImg.src = images[curretIndex].src;
+});
+
+arrowLeft.addEventListener("click", () => {
+    if (curretIndex === 0 ) {
+		curretIndex = images.length -1;
+    } else {
+        curretIndex--;
+    }
+    // console.log(curretIndex);
+    // console.log(images.length);
+	popupImg.src = images[curretIndex].src;
+});
+
+// document.addEventListener('click', e => {
+//     console.log(e.target.getAtribute);
+// })
+
+</script>
+
+
 <style>
+
+/* //////////////////////////// */
+
+.popup {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur 1px;
+          backdrop-filter: blur 1px;
+
+}
+.popup img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.cross {
+  padding: 3px 10px;
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  font-size: 4.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.arrow_right,
+.arrow_left {
+  position: fixed;
+  top: 75%;
+  font-size: 5rem;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.arrow_right {
+  right: 20%;
+}
+
+.arrow_left {
+  left: 20%;
+}
+
+.arrow_right:hover,
+.arrow_left:hover,
+.cross:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////// */
   .rules {
   display: flex;
   flex-direction: column;
@@ -297,6 +442,7 @@ import sala from '../img/sala.jpg'
   font-size: 1.8rem;
   margin: 40px 0;
   text-transform: uppercase;
+  text-align: center;
 }
 .rules .nonDotted {
   list-style: none;
@@ -416,7 +562,7 @@ import sala from '../img/sala.jpg'
   position: relative;
   margin: 10px;
   height: 500px;
-  width: 60%;
+  width:80%;
   text-align: center;
   background-position: center;
   background-size: cover;
@@ -466,7 +612,8 @@ import sala from '../img/sala.jpg'
   color: rgb(141, 138, 138);
 }
 .card p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  line-height:1.4rem ;
 }
 .card button:hover ~ .instructor-text {
   -webkit-clip-path: circle(120% at 50% 90%);
@@ -474,8 +621,17 @@ import sala from '../img/sala.jpg'
 }
 
 @media(min-width: 576px){
+  .card {
+  width:60%;
+}
+.card p {
+  font-size: 1.3rem;
 
-  
+}
+
+.arrow_right,
+.arrow_left {
+  top: 80%;
 }
 
 @media(min-width: 768px){
@@ -493,6 +649,24 @@ import sala from '../img/sala.jpg'
     .card{
     width: 40%;
     }
+
+    .arrow_right,
+.arrow_left {
+  position: fixed;
+  top: 50%;
+  font-size: 5rem;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.arrow_right {
+  right:1%;
+}
+
+.arrow_left {
+  left: 1%;
+}
     
   }
   
@@ -517,8 +691,23 @@ import sala from '../img/sala.jpg'
     
 }
 
+@media(min-width: 1400px){
 
+.arrow_right {
+  right:10%;
+}
 
+.arrow_left {
+  left: 10%;
+}
+
+.cross {
+  padding: 3px 10px;
+  position: fixed;
+  top: 70px;
+  right: 60px;
+}
+}
 
 
 

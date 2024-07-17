@@ -34,6 +34,7 @@ import Section from '../layouts/Section.astro';
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="Ełcki klub karate Kyokushin - klub z ponad 40 letnią tradycją." >
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
     <title>Ełcki Klub Karate Shinkyokushin</title>
@@ -81,7 +82,7 @@ import Section from '../layouts/Section.astro';
       </div>
       </Section>
 
-      <Section sectionTitle="Trenuj z Nami" sectionColor="blue">
+      <Section sectionTitle="Trenuj z Nami" >
         <div class="card-container">
 
           <div class="card">
@@ -396,6 +397,7 @@ import Section from '../layouts/Section.astro';
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            
           }
           .card-news-container{
           width: 90%;
@@ -418,7 +420,6 @@ import Section from '../layouts/Section.astro';
           align-items: center;
           justify-content: center;
           width: 100%;
-          height: 20rem;
           border-bottom: 1px solid black;
         }
         .card-img img{
@@ -464,7 +465,7 @@ import Section from '../layouts/Section.astro';
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 5rem 0;
+            margin-bottom: 2rem;
           }
 
           .circle-box{
@@ -739,19 +740,26 @@ import Section from '../layouts/Section.astro';
           }
 
 
+          .circles{
+          margin-bottom: 7rem;
+          }
 
         }
 
         @media(min-width: 1400px){
           /* --------------ABOUT US */
           .about-us__text{
-          font-size: 1.8rem;
+          font-size: 1.7rem;
         } 
         .about-us__box-text{
           text-align: left;
           width: 70%;
           height: 100%;
           padding: 1.8rem 1.5rem;
+        }
+
+        .about-us__box-img{
+          width: 90%
         }
         .news-info{
           margin: 1rem 1.1rem;
